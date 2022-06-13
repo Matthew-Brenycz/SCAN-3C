@@ -1,0 +1,85 @@
+
+
+{% load cms_tags menu_tags sekizai_tags static %}
+{% load crispy_forms_tags %}
+
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}{% page_attribute "page_title" %}{% endblock title %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/scrolling-nav.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    {% block styles %}
+        <link rel="stylesheet" href="{% static "css/test_form_styles.css" %}">
+    {% endblock styles %}
+    {% render_block "css" %}
+    </head>
+
+    <body>
+    {% comment %} Div for creating a flush footer {% endcomment %}
+    <div class="d-flex flex-column min-vh-100">
+
+        {% cms_toolbar %}
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" id="mainNav">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        {% show_menu 0 100 100 100 "menu/menu.html" %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% placeholder "hero" %}
+        
+        {% comment %} Flex-grow-1 to create space for the flush footer {% endcomment %}
+        <div class="container flex-grow-1">
+            <div class="breadcrumb mt-3">
+                {% show_breadcrumb 0 "breadcrumb.html" %}
+            </div>
+            {% block content %}{% endblock content %}
+            {% block important_info %}{% endblock important_info %}
+        </div>
+
+        <footer class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container">
+                {% comment %} Original footer styling, changed after tester comment {% endcomment %}
+                {% comment %} <ul class="navbar-nav nav-fill justify-content-center w-100"> {% endcomment %}
+                <ul class="navbar-nav nav-fill mx-auto">
+                    <li class="nav-link">
+                        <a class="nav-link">{% static_placeholder 'copyright' %}</a>
+                    </li>
+                    {% show_menu_below_id "footer" 0 100 100 100 "menu/menu.html" %}
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static "vendor/jquery/jquery.min.js "%}"></script>
+    <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static "vendor/jquery-easing/jquery.easing.min.js "%}"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="{% static "js/scrolling-nav.js" %}"></script>
+
+    {% render_block "js" %}
+
+    {% block form_scripts %}
+    {% endblock form_scripts %}
+
+    </body>
+</html>
+
+

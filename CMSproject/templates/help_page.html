@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags sekizai_tags static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/test_form_styles.css" %}">
+{% endblock styles %}
+
+{% block content %}
+<h2 class="display-4 text-center py-3 my-1">Help Sections</h2>
+
+<nav class="nav justify-content-center nav-pills flex-column flex-md-row">
+    <a class="nav-link" href="#help-1" data-toggle="tab">{% placeholder 'Help 1 Tab' %}</a>
+    <a class="nav-link" href="#help-2" data-toggle="tab">{% placeholder 'Help 2 Tab' %}</a>
+    <a class="nav-link" href="#help-3" data-toggle="tab">{% placeholder 'Help 3 Tab' %}</a>
+    <a class="nav-link" href="#help-4" data-toggle="tab">{% placeholder 'Help 4 Tab' %}</a>
+</nav>
+
+<div class="container tab-content py-3">
+    <div class="divider-box-gray tab-pane" id="help-1">
+        {% placeholder 'Help 1 Text' %}
+    </div>
+    <div class="divider-box-gray tab-pane" id="help-2">
+        {% placeholder 'Help 2 Text' %}
+    </div>
+    <div class="divider-box-gray tab-pane" id="help-3">
+        {% placeholder 'Help 3 Text' %}
+    </div>
+    <div class="divider-box-gray tab-pane" id="help-4">
+        {% placeholder 'Help 4 Text' %}
+    </div>
+</div>
+{% endblock content %}

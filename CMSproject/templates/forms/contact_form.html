@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load cms_tags menu_tags sekizai_tags static %}
+{% load crispy_forms_tags %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/test_form_styles.css" %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="d-flex flex-row justify-content-center my-3 mx-3">
+        <div class="row divider-box-blue">
+            <div class="col">
+                <form method="post">
+                    {% csrf_token %}
+                    {% crispy form form.helper %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load cms_tags menu_tags sekizai_tags static %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/test_form_styles.css" %}">
+{% endblock styles %}
+
+{% block content %}
+
+{% placeholder "Test Header" %}
+<div class="container">
+    {% placeholder "test_form_title" %}
+    {% placeholder "test_form_guide" %}
+</div>
+    <div class="container">
+       {% block test_form_opening %}{% endblock test_form_opening%}
+        <div class="row justify-content-center">
+            {% block test_form_left %}{% endblock test_form_left %}
+
+            {% block test_form_right %}{% endblock test_form_right %}
+        </div>
+
+        <div class="container">
+        {% block test_score_inputs %}
+        {% endblock test_score_inputs %}
+        </div>
+        {% block test_form_closing %}{% endblock test_form_closing %}
+    </div>
+
+
+{% endblock content %}
+

@@ -1,0 +1,286 @@
+{% extends 'test_page.html' %}
+{% load cms_tags menu_tags sekizai_tags static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/test_form_styles.css" %}">
+{% endblock styles %}
+
+{% block test_form_opening %}
+    <form method="post" action="http://127.0.0.1:8000/testing/diagnostic-test-4/">
+    {% csrf_token %}
+{% endblock test_form_opening %}
+
+    {% block test_form_left %}
+    <div class="col-md-6 text-center">
+
+        <h2 style="background-color: 87a6c0;" class="text-primary border-top border-primary">Audio</h2>
+        <div class="audio-manual-height">
+            {% placeholder "right_ear_audio" %}
+        </div>
+        <p class="border-bottom border-primary"></p>
+        <h5 style="background-color:lightblue;" class="text-primary">Right Ear</h5>
+        <h6 style="background-color:lightblue;" class="text-primary">Practice Items</h6>
+        <p>{% placeholder "right_ear_sample_1" %}<input class="quiz-txt-inputA" type="text"></input></p>
+        <p>{% placeholder "right_ear_sample_2" %}<input class="quiz-txt-inputB" type="text"></input></p>
+        <br>
+        <h6 style="background-color:lightblue;" class="text-primary">Test Items</h6>
+
+        {% comment %} Questions 1-10 {% endcomment %}
+        <div class="question-par">{% placeholder "quiz_right_1" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_2" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_3" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_4" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_5" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_6" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_7" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_8" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_9" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_10" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+
+        {% comment %} Questions 11-20 {% endcomment %}
+        <div class="question-par">{% placeholder "quiz_right_11" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_12" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_13" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_14" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_15" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_16" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_17" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_18" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_19" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_right_20" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_right" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_right" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+    </div>
+    {% endblock test_form_left %}
+
+    {% block test_form_right %}
+
+    <div class="col-md-6 text-center">
+
+        <h2 style="background-color: 87a6c0;" class="text-primary border-top border-primary">Audio</h2>
+        <div class="audio-manual-height">
+            {% placeholder "left_ear_audio" %}
+        </div>
+        <p class="border-bottom border-primary"></p>
+        <h5 style="background-color:lightblue;" class="text-primary">Left Ear</h5>
+        <h6 style="background-color:lightblue;" class="text-primary">Practice Items</h6>
+        <p>{% placeholder "left_ear_sample_1" %}<input class="quiz-txt-inputC ml-1" type="text"></input></p>
+        <p>{% placeholder "left_ear_sample_2" %}<input class="quiz-txt-inputD ml-1" type="text"></input></p>
+        <br>
+        <h6 style="background-color:lightblue;" class="text-primary">Test Items</h6>
+
+        {% comment %} Questions 1-10 {% endcomment %}
+        <div class="question-par">{% placeholder "quiz_left_1" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_2" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_3" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_4" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_5" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_6" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_7" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_8" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_9" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_10" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+
+        {% comment %} Questions 11-20 {% endcomment %}
+        <div class="question-par">{% placeholder "quiz_left_11" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_12" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_13" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_14" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_15" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_16" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_17" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_18" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_19" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+        <div class="question-par">{% placeholder "quiz_left_20" %}
+            <button class="btn-primary q-btn quiz-button1 quiz_left" type="button">+</button>
+            <button class="btn-primary q-btn quiz-button2 quiz_left" type="button">-</button>
+            <input class="quiz-txt-input1 ml-1" type="text"></input>
+        </div>
+
+    </div>
+
+    {% endblock test_form_right %}
+
+
+    {% block test_score_inputs %}
+    <div class="row justify-content-center my-4 divider-box-gray">
+        <div class="col-md-6 text-center my-2">
+            <label class="font-weight-bold" for="re-score">RE Score</label><input style="max-width: 60px; margin-left: 0.5em;" id="re-score" type="number" readonly></input>
+        </div>
+        <div class="col-md-6 text-center my-2">
+            <label class="font-weight-bold" for="le-score">LE Score</label><input style="max-width: 60px; margin-left: 0.5em;" id="le-score" type="number" readonly></input>
+        </div>
+        <div class="col-md-6 text-center my-2">
+            <label class="font-weight-bold" for="total-score">Total Score</label><input style="max-width: 60px; margin-left: 0.5em;" id="total-score" type="number" readonly></input>
+        </div>
+    </div>
+    {% endblock test_score_inputs %}
+
+
+{% block test_form_closing %}
+    <div class="row justify-content-center my-5">
+        <div class="col-md-6 text-center">
+            <button class="btn btn-primary" type="submit" id="form_submit_button" value="Submit">Submit Test Results</button>
+        </div>
+    </div>
+    </form>
+{% endblock test_form_closing %}
+
+    {% block form_scripts %}
+    <script src="{% static "js/diagnostic_1_scripts.js" %}"></script>
+
+    {% endblock form_scripts %}

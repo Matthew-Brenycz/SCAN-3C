@@ -1,0 +1,95 @@
+
+.form_block {
+    margin-bottom: 20px
+}
+
+.button-div {
+    max-height: 24px;
+    float: right;
+}
+
+.input-div {
+    max-width: 50%;
+}
+
+.input-div input {
+    width: 100%;
+}
+
+.q-btn {
+    border-radius: 5px;
+    width: 27px;
+    font-weight: bold;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+.q-btn:hover {
+    background-color: lightblue;
+}
+
+.main-nav {
+    margin: 10em;
+}
+
+.top-buffer {
+    margin-top: 20px
+}
+
+.comp-sent-input {
+    width: 30px;
+}
+
+.highlight {
+    background-color: lightblue;
+    color: lightblue;
+}
+
+.question-div {
+    margin-bottom: 1px solid blue;
+}
+
+.question-par {
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #0077D6;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.divider-box-gray {
+    background-color: #F3F3F3;
+    border: 1px solid darkgray;
+    padding: 20px;
+}
+
+.divider-box-blue {
+    background-color: #CFFAFF;
+    border: 1px solid #0077D6;
+    padding: 20px;
+}
+
+.score-label {
+    font-size: large;
+}
+
+
+.audio-manual-height {
+    height: 332px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .audio-manual-height {
+        height: auto;
+    }
+
+}

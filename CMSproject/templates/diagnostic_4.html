@@ -1,0 +1,244 @@
+{% extends 'test_page.html' %}
+{% load cms_tags menu_tags sekizai_tags static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/test_form_styles.css" %}">
+{% endblock styles %}
+
+{% block test_form_opening %}
+    <form method="post" name="diagnostic-4-form" action="http://127.0.0.1:8000/test-complete-thank-you-page/">
+    {% csrf_token %}
+{% endblock test_form_opening %}
+
+    {% block test_form_left %}
+<div class="col-lg-6 text-center">
+        <h2 style="background-color: 87a6c0;" class="text-primary border-top border-primary">Audio</h2>
+        {% placeholder "right_ear_audio" %}
+        <p class="border-bottom border-primary"></p>
+        <h5 style="background-color:lightblue;" class="text-primary">Right Ear</h5>
+        <h6 style="background-color:lightblue;" class="text-primary">Practice Items</h6>
+        <div class="d-flex flex-row justify-content-center question-par">
+        <div class="my-auto p-3">a.</div>
+            <div class="p3 mr-5 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Right Ear Sample #1 Right Ear" %}</div>
+                <div>{% placeholder "Right Ear Sample #1 Left Ear" %}</div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="ml-auto p-3">b.</div>
+            <div class="p3 mr-5 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Right Ear Sample #2 Right Ear" %}</div>
+                <div>{% placeholder "Right Sample #2 Left Ear" %}</div>
+            </div>
+        </div>
+        <br>
+
+        <div class="d-flex flex-row" style="background-color:lightblue;">
+        <h6 style="background-color:lightblue;" class="text-primary text-left my-auto ml-2 flex-grow-1">Test Items</h6>
+        <h6 class="my-auto mr-2">Words Correct</h6>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">1</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue;">{% placeholder "Question Right #1 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #1 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="4" oninput="validity.valid||(value='');"> /4</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">2</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #2 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #2 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">3</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #3 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #3 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">4</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #4 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #4 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">5</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #5 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #5 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">6</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #6 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #6 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">7</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #7 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #7 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="5" oninput="validity.valid||(value='');"> /5</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">8</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #8 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #8 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">9</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #9 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #9 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="4" oninput="validity.valid||(value='');"> /4</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">10</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3" style="background: lightblue">{% placeholder "Question Right #10 Right Ear" %}</div>
+                <div>{% placeholder "Question Right #10 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-right" type="number" min="0" max="4" oninput="validity.valid||(value='');"> /4</input></div>
+        </div>
+
+
+</div>
+    {% endblock test_form_left %}
+
+    {% block test_form_right %}
+
+<div class="col-lg-6 text-center">
+        <h2 style="background-color: 87a6c0;" class="text-primary border-top border-primary">Audio</h2>
+        {% placeholder "left_ear_audio" %}
+        <p class="border-bottom border-primary"></p>
+        <h5 style="background-color:lightblue;" class="text-primary">Left Ear</h5>
+        <h6 style="background-color:lightblue;" class="text-primary">Practice Items</h6>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">c.</div>
+            <div class="p3 mr-5 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Left Ear Sample #1 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Left Ear Sample #1 Left Ear" %}</div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">d.</div>
+            <div class="p3 mr-5 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Left Ear Sample #2 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Left Ear Sample #2 Left Ear" %}</div>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="d-flex flex-row" style="background-color:lightblue;">
+        <h6 style="background-color:lightblue;" class="text-primary text-left my-auto ml-2 flex-grow-1">Test Items</h6>
+        <h6 class="my-auto mr-2">Words Correct</h6>
+        </div>
+
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">11</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #1 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #1 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="4" oninput="validity.valid||(value='');"> /4</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">12</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #2 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #2 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">13</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #3 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #3 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">14</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #4 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #4 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">15</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #5 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #5 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">16</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #6 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #6 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">17</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #7 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #7 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="5" oninput="validity.valid||(value='');"> /5</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">18</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #8 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #8 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="3" oninput="validity.valid||(value='');"> /3</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">19</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #9 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #9 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="4" oninput="validity.valid||(value='');"> /4</input></div>
+        </div>
+        <div class="d-flex flex-row justify-content-center question-par">
+            <div class="my-auto p-3">20</div>
+            <div class="p3 align-self-center flex-grow-1"><div class="px-3">{% placeholder "Question Left #10 Right Ear" %}</div>
+                <div style="background: lightblue">{% placeholder "Question Left #10 Left Ear" %}</div>
+            </div>
+            <div class="my-auto p-3"><input class="quiz-txt-input0 comp-sent-input quiz-left" type="number" min="0" max="4" oninput="validity.valid||(value='');"> /4</input></div>
+        </div>
+
+</div>
+    {% endblock test_form_right %}
+
+
+    {% block test_score_inputs %}
+    <div class="row justify-content-center my-4 divider-box-gray">
+        <div class="col-lg-6 text-center my-2">
+            <label class="font-weight-bold" for="re-score">RE Score</label><input style="max-width: 60px; margin-left: 0.5em;" id="re-score" type="number" readonly></input>
+        </div>
+        <div class="col-lg-6 text-center my-2">
+            <label class="font-weight-bold" for="le-score">LE Score</label><input style="max-width: 60px; margin-left: 0.5em;" id="le-score" type="number" readonly></input>
+        </div>
+        <div class="text-center my-2">
+            <label class="font-weight-bold" for="total-score">Total Score</label><input style="max-width: 60px; margin-left: 0.5em;" id="total-score" type="number" readonly></input>
+        </div>
+    </div>
+    {% endblock test_score_inputs %}
+
+
+{% block test_form_closing %}
+    <div class="row justify-content-center my-5">
+        <div class="col-md-6 text-center">
+            <button class="btn btn-primary" type="submit" id="form_submit_button" value="Submit">Submit Test Results</button>
+        </div>
+    </div>
+    </form>
+{% endblock test_form_closing %}
+
+    {% block form_scripts %}
+
+    <script src="{% static "js/diagnostic_4_scripts.js" %}"></script>
+
+    {% endblock form_scripts %}

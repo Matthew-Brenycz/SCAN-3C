@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load cms_tags menu_tags sekizai_tags static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/test_form_styles.css" %}">
+{% endblock styles %}
+
+{% block content %}
+
+<div class="container mb-3">
+<div class="row">
+
+      <div class="col-md-8 blog-main">
+            {% block page-inner %}
+              {% placeholder "content" %}
+                {% endblock page-inner %}
+      </div>
+
+      <div class="col-md-3 col-md-offset-1 ml-md-auto ml-3 mr-3 mb-md-auto mb-4 blog-sidebar divider-box-gray">
+    <div class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p>Explore the following articles by Audacious Hearing Specialists.</p>
+    </div>
+    <div class="sidebar-module">
+    <h4>Latest Articles</h4>
+
+        {% static_placeholder "posts" %}
+        </div>
+    <div class="sidebar-module">
+    <h4>User</h4>
+    <ol class="list-unstyled">
+      <li><a href="?edit">Log In</a></li>
+    </ol>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock content %}

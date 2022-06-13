@@ -1,0 +1,86 @@
+
+{% load menu_tags static %}
+
+{% comment %} {% for child in children %}​​​​
+
+    <li class="btn btn-outline-primary nav-link js-scroll-trigger child{% if child.selected %}​​​​ selected{% endif %}​​​​​{% if child.ancestor %}​​​​ ancestor{% endif %}​{% if child.sibling %}​​​​ sibling{% endif %}​​{% if child.descendant %}​​​​ descendant{% endif %}​​​​">
+
+        <a type="button" class="nav-link text-white" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+
+
+        {% if child.children %}
+            <ul>
+                {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}​​​​
+            </ul>
+
+            {% endif %}
+
+    </li>
+
+{% endfor %} {% endcomment %}
+
+
+{% comment %} {% for child in children %}
+    <li class="nav-item bg-dark {% if child.children and dropdown %}dropdown icon-dropdown{% endif %}{% if child.selected %} active{% endif %}">
+        <a class="nav-link bg-dark {% if child.children and dropdown %}dropdown-toggle{% endif %}"
+            {% if child.children and dropdown %}
+                data-toggle="dropdown"
+                id="dropdown-{{ child.get_menu_title|slugify }}"
+                href="#"
+            {% else %}
+                href="{{ child.attr.redirect_url|default:child.get_absolute_url }}"
+            {% endif %}
+            >
+            {{ child.get_menu_title }}
+        </a>
+        {% if child.children and dropdown %}
+            <div class="dropdown-menu" aria-labelledby="dropdown-{{ child.get_menu_title|slugify }}">
+                {% show_menu from_level to_level extra_inactive extra_active "includes/dropdown.html" "" "" child %}
+            </div>
+        {% endif %}
+    </li>
+{% endfor %} {% endcomment %}
+
+
+{% comment %} {% for child in children %}
+    <li class="nav-item bg-dark {% if child.children and dropdown %}dropdown icon-dropdown{% endif %}{% if child.selected %} active{% endif %}">
+        <a class="nav-link bg-dark {% if child.children and dropdown %}dropdown-toggle{% endif %}"
+            {% if child.children and dropdown %}
+                data-toggle="dropdown"
+                id="dropdown-{{ child.get_menu_title|slugify }}"
+                href="#"
+            {% else %}
+                href="{{ child.attr.redirect_url|default:child.get_absolute_url }}"
+            {% endif %}
+            >
+            {{ child.get_menu_title }}
+        </a>
+        {% if child.children and dropdown %}
+            <div class="dropdown-menu" aria-labelledby="dropdown-{{ child.get_menu_title|slugify }}">
+                {% show_menu from_level to_level extra_inactive extra_active "includes/dropdown.html" "" "" child %}
+            </div>
+        {% endif %}
+    </li>
+{% endfor %} {% endcomment %}
+
+
+{% for child in children %}
+    <li class="mx-sm-1 btn btn-outline-primary nav-item js-scroll-trigger child {% if child.children and dropdown %}dropdown icon-dropdown{% endif %}{% if child.selected %} active{% endif %}">
+        <a type="button" class="nav-link text-white {% if child.children and dropdown %}dropdown-toggle{% endif %}"
+            {% if child.children and dropdown %}
+                data-toggle="dropdown"
+                id="dropdown-{{ child.get_menu_title|slugify }}"
+                href="#"
+            {% else %}
+                href="{{ child.attr.redirect_url|default:child.get_absolute_url }}"
+            {% endif %}
+            >
+            {{ child.get_menu_title }}
+        </a>
+        {% if child.children and dropdown %}
+            <div class="dropdown-menu" aria-labelledby="dropdown-{{ child.get_menu_title|slugify }}">
+                {% show_menu from_level to_level extra_inactive extra_active "includes/dropdown.html" "" "" child %}
+            </div>
+        {% endif %}
+    </li>
+{% endfor %}
