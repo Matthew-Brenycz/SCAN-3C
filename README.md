@@ -1,5 +1,3 @@
-# SCAN-3-C-Test-Site
-# SCAN-3-C-Test-Site
 # SCAN-3C
-# SCAN-3C
-# SCAN-3C
+
+To view the website, visit https://scan-3c-mb1999.pythonanywhere.com/.
